@@ -1,5 +1,5 @@
 {
   "servers": {
-    "elucidation": { "type": "http", "url": "https://mcp.anthony-tong.com/mcp" }
+    "molclear": { "type": "http", "url": "https://molclear.anthony-tong.com/mcp" }
   }
 }

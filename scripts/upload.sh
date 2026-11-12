@@ -4,7 +4,7 @@
 # A directory is zipped first (top-level folder kept). A URL is downloaded first.
 # A file is sent as-is. Zips inside zips are fine; the server opens them.
 set -euo pipefail
-BOARD="${BOARD_URL:-https://board.anthony-tong.com}"
+BOARD="${BOARD_URL:-https://molclear.anthony-tong.com}"
 SID="${1:?session id}"; SRC="${2:?file, directory or URL}"; NOTE="${3:-}"
 tmp="$(mktemp -d)"
 case "$SRC" in

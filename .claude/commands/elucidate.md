@@ -2,7 +2,7 @@ Run a structure elucidation on the board.
 
 1. The canonical start is the text the chemist copies from the board's **Connect agent**
    button; it carries the session id. If $ARGUMENTS or the conversation contains it, use that id.
-   If not, ask the chemist to create the session on https://board.anthony-tong.com, upload their
+   If not, ask the chemist to create the session on https://molclear.anthony-tong.com, upload their
    data there and paste the Connect-agent text. (Only if they insist on starting here:
    `start_session(title=...)` and give them the board link it returns.)
 2. Call `start_session(session_id=..., agent="Claude Code / <model>")`. It returns the

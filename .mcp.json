@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "elucidation": {
+    "molclear": {
       "type": "http",
-      "url": "https://mcp.anthony-tong.com/mcp"
+      "url": "https://molclear.anthony-tong.com/mcp"
     }
   }
 }
