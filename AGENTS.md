@@ -1,7 +1,7 @@
 # Independent verifier launcher
 
 This branch of the repository opens an AI coding agent (Claude Code, Codex CLI, Cursor, VS Code
-…) as the **independent verifier** of a structure elucidation: the `elucidation-verifier` MCP
+…) as the **independent verifier** of a structure elucidation: the `molclear-verifier` MCP
 server is configured, and nothing else. The verifier checks that what is on the board is
 chemically accurate and supported by the data. It does not do the elucidation, never edits
 the board, and does not see the chemist–agent conversation: it writes findings, and the
@@ -20,7 +20,7 @@ not the board link. Then:
    your **protocol**: read it and follow it.
 3. Check the board, `post_findings` for each problem, `end_verification` at the end.
 
-If the `elucidation-verifier` tools are not available, say so and stop: the app is not
+If the `molclear-verifier` tools are not available, say so and stop: the app is not
 connected (see README.md).
 
 ## Your own copy of the data
@@ -38,6 +38,6 @@ finding. Your key opens only the verifier's routes; do not look for the session 
 
 ## Notes
 - Cloud sandboxes restrict outbound network: the environment must allow
-  `mcp.anthony-tong.com` and `board.anthony-tong.com` (and PyPI for the Python tools).
+  `molclear.anthony-tong.com` (and PyPI for the Python tools).
 - `BOARD_URL` overrides the board base URL for the scripts.
 - Your key opens this session's data: do not paste it anywhere public.

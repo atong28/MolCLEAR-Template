@@ -7,7 +7,7 @@
 #   scripts/fetch.sh vk-… "runs/1H.r1/complex" h1.bin  float32 re/im pairs
 #   scripts/fetch.sh vk-… uploads/<stored name> raw.zip   (the url listed in board → uploads)
 set -euo pipefail
-BOARD="${BOARD_URL:-https://board.anthony-tong.com}"
+BOARD="${BOARD_URL:-https://molclear.anthony-tong.com}"
 KEY="${1:?verifier key (vk-…)}"; P="${2:?path, e.g. board}"; OUT="${3:-}"
 case "$KEY" in vk-*) ;; *) echo "that is not a verifier key (vk-…): copy it from the Connect-verifier text" >&2; exit 1 ;; esac
 P="${P#/}"; P="${P#api/verify/$KEY/}"

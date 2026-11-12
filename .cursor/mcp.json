@@ -1,5 +1,5 @@
 {
   "mcpServers": {
-    "elucidation-verifier": { "url": "https://mcp.anthony-tong.com/verify" }
+    "molclear-verifier": { "url": "https://molclear.anthony-tong.com/verify" }
   }
 }
