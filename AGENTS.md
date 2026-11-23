@@ -11,10 +11,10 @@ with its own branch (`verifier`) and server (`molclear-verifier`): if its tools
 
 ## How a session starts
 Sessions start **on the board** (https://molclear.anthony-tong.com). The chemist creates one,
-uploads their data there, clicks **Connect agent** and pastes that text to you. It carries the
-session id. Then:
+uploads their data there, clicks **Connect agent** and pastes that text to you. It carries your
+**agent key** (`ak-…`), which you pass as `session_id` to every tool. Then:
 
-1. `start_session(session_id="<id from the pasted text>", agent="<your app / model>")`, e.g.
+1. `start_session(session_id="<agent key from the pasted text>", agent="<your app / model>")`, e.g.
    agent="Codex CLI / gpt-5.5" or "Claude Code / Claude Opus". It returns the operating
    **protocol**: read it and follow it for the whole session.
 2. `begin_turn(session_id, focus_phase)` → work the phases → `end_turn(...)`, every turn.
@@ -45,4 +45,6 @@ hand-editing structures. The board's own chemistry tools work either way.
 - Cloud sandboxes restrict outbound network: the environment must allow
   `molclear.anthony-tong.com` (and PyPI for RDKit).
 - `BOARD_URL` overrides the board base URL for the scripts.
-- Session links are public behind an unguessable id; do not paste them anywhere public.
+- Access is by per-session keys: the chemist's access link and the Connect-agent text (your
+  agent key) each open the session. Never paste either anywhere public, and never print the
+  key back to the chemist unless asked.
